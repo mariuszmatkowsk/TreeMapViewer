@@ -61,6 +61,10 @@ struct TreeMap {
             .is_leaf = true,
             .is_file = is_file};
 
+        if (nodes.empty()) {
+            root = node;
+        }
+
         nodes.push_back(node);
 
         if (parent) {
